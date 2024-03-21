@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WebsocketService } from 'src/app/services/websocket.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(public wsService: WebsocketService){}
+  
 }
