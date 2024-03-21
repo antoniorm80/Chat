@@ -1,1 +1,15 @@
-<p>lista-usuarios works!</p>
+<h3>Usuarios</h3>
+<hr>
+<ol class="list-group list-group-numbered">
+    <li *ngFor="let usuario of usuariosActivosObs | async"
+    class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ usuario.nombre }}</div>
+        <span class="list-group-item list-group-item-info">
+            {{ usuario.id }}
+        </span>        
+      </div>
+      <span class="badge text-bg-primary rounded-pill"> {{ usuario.sala }}</span>
+    </li>  
+</ol>
+
